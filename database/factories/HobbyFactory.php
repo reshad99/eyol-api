@@ -1,0 +1,26 @@
+<?php
+
+namespace Database\Factories;
+
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+class HobbyFactory extends Factory
+{
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition()
+    {
+        return [
+            'gym' => $this->faker->boolean(),
+            'art' => $this->faker->boolean(),
+            'gaming' => $this->faker->boolean(),
+            'sport' => $this->faker->boolean(),
+            'book' => $this->faker->boolean(),
+            'cinema' => $this->faker->boolean(),
+            'user_id' => mt_rand(1,20),
+        ];
+    }
+}
