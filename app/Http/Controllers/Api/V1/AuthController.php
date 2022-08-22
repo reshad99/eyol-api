@@ -34,10 +34,10 @@ class AuthController extends Controller
                 ]);
             }
             else
-            return response()->json(['success' => false, 'message' => 'Şifrə səhvdir']);
+            return response()->json(['success' => false, 'message' => 'Şifrə səhvdir'], 401);
         }
         else
-        return response()->json(['success' => false, 'message' => 'Nömrə yanlışdır']);
+        return response()->json(['success' => false, 'message' => 'Nömrə yanlışdır'], 401);
     }
 
     public function register(RegisterRequest $request)
