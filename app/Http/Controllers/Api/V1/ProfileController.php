@@ -18,7 +18,7 @@ class ProfileController extends Controller
         try
         {
             $user = User::findOrFail($id);
-            return $this->apiResponse(ResultType::Fetch, new UserProfileResource($user), 200);
+            return $this->apiResponse(ResultType::Fetch, $user, 200);
         } catch (\Throwable $th) {
             throw $th;
         }
