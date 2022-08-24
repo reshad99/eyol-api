@@ -25,23 +25,11 @@ class RegisterRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'phone' => 'required',
+            'email' => 'required|email',
             'password' => 'required',
-            'username' => 'required',
+            'username' => 'required|unique:users,username',
             'dob' => 'required',
             'gender' => 'required',
-            'height' => 'required',
-            'interest' => 'required',
-            'zodiac' => 'required',
-            'alcohol' => 'required',
-            'hobbies' => 'required',
-            'love' => 'required',
-            'fling' => 'required',
-            'fun_chats' => 'required',
-            'friends' => 'required',
-            'job' => 'required',
-            'networking' => 'required',
-            'relationship' => 'required',
         ];
     }
 }
